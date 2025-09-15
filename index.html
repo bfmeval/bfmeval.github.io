@@ -89,9 +89,9 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
+              <!-- <h1 class="title is-1 publication-title">
                 [Supplementary Information]
-              </h1>
+              </h1> -->
               <h2 class="title is-2 publication-title">
                 Evaluating the ability of a behavioral foundation model to predict human neuromechanics
               </h2>
@@ -187,13 +187,31 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <h2 class="title is-3">
-            <span class="dnerf">Ground Truth</span> (Human Locomotion)
+            <span class="dnerf">Comparison @ Slow Speed</span>
           </h2>
           <video id="expert" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/expert.mp4" type="video/mp4" />
+            <source src="./static/videos/cpr_0.50.mp4" type="video/mp4" />
+          </video>
+          <h5 class="subtitle has-text-left">
+            <strong>GT:</strong> Ground Truth, <strong>TA:</strong> Task-Agnostic, <strong>TS:</strong> Task-Specific
+            <br>
+            <strong>cmd:</strong> Commanded speed, <strong>meas:</strong> Measured speed
+          </h5>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <h2 class="title is-3">
+            <span class="dnerf">Comparison @ Medium Speed</span>
+          </h2>
+          <video id="baseline" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/cpr_1.50.mp4" type="video/mp4" />
           </video>
           <!-- <h2 class="subtitle has-text-centered">
-            <span class="dnerf">Ground Truth</span>
+            N=8902, All speed locomotion + Non-locomotion
           </h2> -->
         </div>
       </div>
@@ -203,35 +221,19 @@
       <div class="container is-max-desktop">
         <div class="hero-body">
           <h2 class="title is-3">
-            <span class="dnerf">Task-Agnostic Baseline</span> (TA-Baseline)
-          </h2>
-          <video id="baseline" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/TA-BS.mp4" type="video/mp4" />
-          </video>
-          <h2 class="subtitle has-text-centered">
-            N=8902, All speed locomotion + Non-locomotion
-          </h2>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <h2 class="title is-3">
-            <span class="dnerf">Task-Specific Large All</span> (TS-Large-All)
+            <span class="dnerf">Comparison @ Fast Speed</span>
           </h2>
           <video id="ts-l-a" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/TS-L-A.mp4" type="video/mp4" />
+            <source src="./static/videos/cpr_3.00.mp4" type="video/mp4" />
           </video>
-          <h2 class="subtitle has-text-centered">
+          <!-- <h2 class="subtitle has-text-centered">
             N=1107, All speed locomotion [0 - 5m/s]
-          </h2>
+          </h2> -->
         </div>
       </div>
     </section>
 
-    <section class="hero teaser">
+    <!-- <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
           <h2 class="title is-3">
@@ -245,9 +247,9 @@
           </h2>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="hero teaser">
+    <!-- <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
           <h2 class="title is-3">
@@ -261,9 +263,9 @@
           </h2>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section class="hero teaser">
+    <!-- <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
           <h2 class="title is-3">
@@ -277,7 +279,7 @@
           </h2>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="section">
       <div class="container is-max-desktop">
@@ -299,6 +301,22 @@
                 We propose a systematic evaluation framework 
                 using neuromechanics-grounded human-likeness metrics 
                 to assess the feasibility of BFMs in neuromechanics research.
+              </p>
+              <p>
+                We observed two noticeable findings:
+                <ul>
+                  <li>
+                  <span class="dnerf">Task-Specific</span> BFMs captured human-like locomotion comparably to 
+                  <span class="dnerf">Task-Agnostic</span>.
+                  </li>
+                  <li>
+                    <span class="dnerf">Task-Specific</span>  BFMs could be a sample-efficient alternative to 
+                    <span class="dnerf">Task-Agnostic</span>.
+                  </li>
+                </ul>
+              </p>
+              <p>
+                Our findings underscore <strong>the importance of neuromechanics-aware evaluations of BFMs.</strong>
               </p>
             </div>
           </div>
